@@ -22,6 +22,19 @@ func TestMain(m *testing.M) {
 	fmt.Println("sesudah")
 }
 
+func BenchmarkHelloWorld(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		HelloWorld("budi")
+
+	}
+}
+func BenchmarkHelloWorldBudi(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		HelloWorld("budi")
+
+	}
+}
+
 func TestTableTest(t *testing.T) {
 
 	data := []struct {
